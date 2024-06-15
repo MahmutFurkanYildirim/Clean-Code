@@ -1,4 +1,5 @@
-﻿using FCleanCode.Inheritance;
+﻿using FCleanCode.Encapsulation;
+using FCleanCode.Inheritance;
 using FCleanCode.Polymorphism;
 using FCleanCode.Static;
 
@@ -9,6 +10,7 @@ namespace FCleanCode
 		private static void Main(string[] args)
 		{
 			//-------------------------------------STATIC--------------------------------------------------------//
+			Console.WriteLine("------------------------STATIC------------------------------");
 			Counter counter = null;
 
 			for (int i = 0; i < 10; i++)
@@ -32,6 +34,7 @@ namespace FCleanCode
 			Console.WriteLine("Static Counter: " + Counter.StaticCounter);
 
 			//------------------------------------INHERITANCE---------------------------------------------------------//
+			Console.WriteLine("------------------------INHERITANCE------------------------------");
 			Car car = new Car();
 			car.Brand = "Mercedes";
 			car.Prize = 25000;
@@ -47,10 +50,16 @@ namespace FCleanCode
 			Console.WriteLine("Write what you wanna see information about plane!");
 
 			//------------------------------------POLYMORPHISM---------------------------------------------------------//
+			Console.WriteLine("------------------------POLYMORPHISM------------------------------");
 			FruitColor(new Apple());
 			FruitColor(new Lemon());
 			FruitColor(new Kiwi());
 
+			//------------------------------------ENCAPSULATION---------------------------------------------------------//
+			Console.WriteLine("------------------------ENCAPSULATION------------------------------");
+			Person person = new Person();
+			person.SetTc("11111111111");
+			Console.WriteLine("Valid TR ID number has been set: " + person.GetTc());
 
 
 		}
